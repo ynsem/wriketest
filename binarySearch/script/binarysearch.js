@@ -10,7 +10,7 @@ function binarySearch(value, list) {
 
     // позиция первого (нулевого) элемента отрезка
     let firstElementPosition = 0;
-    // позиция последнего элемента массива
+    // позиция последнего элемента отрезка
     let lastElementPosition = list.length - 1;
     // позиция среднего элемента отрезка
     let middleElementPosition;
