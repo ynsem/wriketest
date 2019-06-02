@@ -3,21 +3,20 @@
 // value - искомый элемент
 // list - рабочий массив
 
-// позиция искомого элемента
-let itemPosition;
-
-// позиция первого (нулевого) элемента массива
-let firstElementPosition = 0;
-// позиция последнего элемента массива
-let lastElementPosition = list.length - 1;
-// позиция среднего элемента массива
-let middleElementPosition;
-
-// флаг цикла
-let found = false;
-
-
 function binarySearch(value, list) {
+
+    // позиция искомого элемента
+    let itemPosition = -1;
+
+    // позиция первого (нулевого) элемента массива
+    let firstElementPosition = 0;
+    // позиция последнего элемента массива
+    let lastElementPosition = list.length - 1;
+    // позиция среднего элемента массива
+    let middleElementPosition;
+
+    // флаг цикла
+    let found = false;
 
     // найдем середину массива
     // с учетом того, что массив может быть нечетной длины, используем округление до ближайшего меньшего
@@ -43,3 +42,9 @@ function binarySearch(value, list) {
 
     return itemPosition;
 }
+
+let a = 5;
+let b = [0, 1, 2, 3 , 4, 5, 6, 7, 8];
+
+console.log(binarySearch(a, b));
+
