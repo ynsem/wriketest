@@ -56,7 +56,10 @@ describe("binarySearch", function () {
         assert.equal(binarySearch(5, []), -1);
     });
     // 11
-    it("Возвращает -1 если массив несортирован", function () {
-        assert.equal(binarySearch(5, []), -1);
+    it("Возвращает -1 если массив несортирован (вариант 1)", function () {
+        assert.equal(binarySearch(2, [0, 2, 1, 9, 7, 18, 5, 4]), -1);
+    });
+    it("Возвращает -1 если массив несортирован (вариант 2)", function () {
+        assert.equal(binarySearch(18, [0, 2, 1, 9, 7, 18, 5, 4]), -1);
     });
 });
