@@ -5,16 +5,17 @@
         <title>BinarySearch</title>
 
         <!-- подключаем стили Mocha, для отображения результатов -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+        <link rel="stylesheet" href="node_modules/mocha/mocha.css">
         <!-- подключаем библиотеку Mocha -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+        <script src="node_modules/mocha/mocha.js"></script>
         <!-- настраиваем Mocha: предстоит BDD-тестирование -->
         <script>
             mocha.setup('bdd');
         </script>
 
         <!-- подключаем chai -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+        <script src="node_modules/chai/chai.js"></script>
+
         <!-- выносим assert в глобальную область -->
         <script>
             var assert = chai.assert;
@@ -23,7 +24,7 @@
 
     <body>
         <!-- скрипт со спецификациями -->
-        <script src="test.js"></script>
+        <script src="script/test.js"></script>
 
         <!-- результаты тестов -->
         <div id="mocha"></div>
