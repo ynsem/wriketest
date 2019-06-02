@@ -1,0 +1,21 @@
+{
+  "name": "BinarySearch",
+  "version": "0.1",
+  "private": true,
+  "description": "Тестовое задание Wrike",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:4ubaka447/wriketest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4ubaka447/wriketest/issues"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": "8.11"
+  }
+}
