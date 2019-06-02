@@ -28,6 +28,7 @@ function binarySearch(value, list) {
         // искомый элемент в середине массива
         if (middleElementPosition == value) {
             itemPosition = middleElementPosition;
+            found = true;
         } else {
             // искомый элемент в левой части массива
             if (list[middleElementPosition] > value) {
