@@ -45,7 +45,8 @@ function binarySearch(value, list) {
         while (found === false && firstElementPosition <= lastElementPosition) {
             // найдем середину массива
             // с учетом того, что массив может быть нечетной длины, используем округление до ближайшего меньшего
-            middleElementPosition = Math.floor((firstElementPosition + lastElementPosition) / 2);
+            // + защитимся от переполнения при очень большой длине массива
+            middleElementPosition = Math.floor((firstElementPosition + (lastElementPosition - firstElementPosition) / 2));  
             console.log(middleElementPosition); //для отладки
             // искомый элемент в середине массива
             if (middleElementPosition == value) {
