@@ -30,6 +30,41 @@ function checksArray(list) {
 }
 
 
+// функция проверки на дублированные значения
+// возвращает массив позиций
+// т.к. перед запуском бинарного поиска выполняется проверка на сортировку, а данная функция запускается после,
+// то пробегать массив целиком не имеет смысла
+function findIdenticalItems(position, list) {
+    if (position !== -1) {
+        let nextPosition = position + 1;
+        let previousPosition = position - 1;
+
+        let arrayPositions = [position];
+
+        // проход в правую сторону
+        while (list[position] === list[nextPosition]) {
+            arrayPositions.push(nextPosition);
+            nextPosition++;
+        }
+
+        // проход в левую сторону
+        while (list[position] === list[previousPosition]) {
+            arrayPositions.push(previousPosition);
+            previousPosition--;
+        }
+
+        // проверка на необходимость замены значения массивом
+        // + сортировка для вывода номеров позиций по порядку
+        if (arrayPositions.length > 1) {
+            arrayPositions.sort();
+            position = arrayPositions;
+        }
+    }
+
+    return position;
+}
+
+
 
 // функция бинарного поиска элемента в массиве
 // возвращает позицию элемента
@@ -87,6 +122,8 @@ function binarySearch(value, list) {
             }
         }
     }
+
+    position = findIdenticalItems(position, list);
 
     return position;
 }

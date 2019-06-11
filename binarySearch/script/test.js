@@ -30,12 +30,12 @@ describe("binarySearch", function () {
         assert.equal(binarySearch(0, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]), 0);
     });
     it("Возвращает позицию элемента, если он последний", function () {
-        assert.equal(binarySearch(4, [9, 8, 7, 7, 4, 4, 2, 1, 0, -5]), 4);
+        assert.equal(binarySearch(-5, [9, 8, 7, 7, 4, 2, 1, 0, -5]), 8);
     });
     it("Возвращает -1 если массив пустой", function () {
         assert.equal(binarySearch(5, []), -1);
     });
-    it("Возвращает -1 если массив несортирован (вариант 1)", function () {
+    it("Возвращает -1 если массив несортирован", function () {
         assert.equal(binarySearch(0, [0, 2, 1, 9, 7, 18, 5, 4]), -1);
     });
     it("Возвращает позицию элемента, если в массиве 1 элемент", function () {
@@ -43,5 +43,8 @@ describe("binarySearch", function () {
     });
     it("Возвращает позицию элемента, если в массиве 2 элемента", function () {
         assert.equal(binarySearch(1, [0, 1]), 1);
+    });
+    it("Возвращает массив позиций", function () {
+        assert.isArray(binarySearch(1, [1, 1, 1, 1, 1]), [0, 1, 2, 3, 4]);
     });
 });
