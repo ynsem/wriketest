@@ -17,7 +17,7 @@ function checksArray(list) {
     // проверим массив на сортированность по убыванию
     for (let i = 0; i < list.length - 1; i++) {
         if (list[i] < list[i + 1]) {
-            arraySortedAscending = false;
+            arraySortedDescending = false;
         }
     }
 
@@ -25,8 +25,11 @@ function checksArray(list) {
     if (arraySortedAscending === false && arraySortedDescending === false) {
         return false;
     }
+
     return true;
 }
+
+
 
 // функция бинарного поиска элемента в массиве
 // возвращает позицию элемента
@@ -60,12 +63,12 @@ function binarySearch(value, list) {
             // + защитимся от переполнения при очень большой длине массива
             middleElementPosition = Math.floor((firstElementPosition + (lastElementPosition - firstElementPosition) / 2));
             // искомый элемент в середине массива
-            if (middleElementPosition == value) {
+            if (list[middleElementPosition] == value) {
                 position = middleElementPosition;
                 found = true;
             } else {
                 // 1я ветка - работает с массивом сортированным по возрастанию, или из одинаковых элементов
-                if (list[firstElementPosition] <= list[lastElementPosition]) {
+                if (list[0] <= list[list.length - 1]) {
                     // искомый элемент в левой части массива
                     if (value < list[middleElementPosition]) {
                         lastElementPosition = middleElementPosition - 1;
